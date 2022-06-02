@@ -1,7 +1,8 @@
 // Just sample data from the web
 // this should be in form format
 
-export default [
+export default //const mydata =
+[
   {
     title: "Abesha lebiss",
     price: "$149.99",
@@ -135,3 +136,7 @@ export default [
       "https://images-na.ssl-images-amazon.com/images/I/61KBB8K1wDL._AC_SL1000_.jpg",
   },
 ];
+
+// const myJsonData = JSON.stringify(mydata);
+// console.log(myJsonData);
+// localStorage.setItem("mysavedjsonData", myJsonData);

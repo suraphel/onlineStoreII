@@ -1,5 +1,3 @@
-//
-
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Avatar, IconButton } from "@material-ui/core";
@@ -14,7 +12,12 @@ import { AddShoppingCartSharp, Email } from "@material-ui/icons";
 import ShareIcon from "@material-ui/icons/Share";
 import CardMedia from "@material-ui/core/CardMedia";
 
+import { cartAction } from "./store/cart-slice";
+import { useDispatch } from "react-redux";
+
 const LocalCarts = (props) => {
+  const dispatch = useDispatch();
+
   const {
     avatarSrc,
     avatarUrl,
@@ -26,17 +29,30 @@ const LocalCarts = (props) => {
     description,
   } = props;
 
+  const addToCartHandler = () => {
+    dispatch(
+      cartAction.addItemToCart({
+        id: props.key,
+        title: title,
+        price: price,
+        description: description,
+        img: avatarUrl,
+      })
+    );
+  };
+  console.log(addToCartHandler());
+
   return (
     <Card>
       <CardHeader
         avatar={<Avatar Src={avatarUrl} />}
         action={
           <IconButton aria-label="settings">
-            <ShareIcon />
+            <ShareIcon onClick={() => console.log("SHARED")} />
           </IconButton>
         }
         title={title}
-        subheader={subtitle}
+        subheader={"subtitle"}
       />
       <CardMedia style={{ height: "400px", width: "400px" }} image={imageUrl} />
 
@@ -45,7 +61,9 @@ const LocalCarts = (props) => {
       </CardContent>
       <CardActions>
         <Button size="small">Buy Now</Button>
-        <Button size="small">Add to cart</Button>
+        <Button size="small" onClick={addToCartHandler}>
+          Add to cart
+        </Button>
         price={price}
       </CardActions>
     </Card>
