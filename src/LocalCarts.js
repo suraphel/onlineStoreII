@@ -40,7 +40,6 @@ const LocalCarts = (props) => {
       })
     );
   };
-  console.log(addToCartHandler());
 
   return (
     <Card>

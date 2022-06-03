@@ -14,8 +14,8 @@ function App(props) {
     <>
       {show && <Cart />}
       <Buttonz />
-      <Nav />
       <AddProduct />
+      <Nav />
     </>
   );
 }

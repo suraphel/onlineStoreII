@@ -12,10 +12,10 @@ const Cart = (props) => {
         <CartItem
           item={{
             title: "Product title",
-            quantity: 5,
-            total: 350.1,
+            quantity: 0,
+            total: 0,
             //${`{price} * {quantity}`},
-            price: 6,
+            price: 0,
             img: "",
           }}
         />

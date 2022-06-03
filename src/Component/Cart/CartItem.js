@@ -9,6 +9,7 @@ const CartItem = (props) => {
 
   const dispatch = useDispatch();
   const counter = useSelector((state) => state.cart.quantity);
+  console.log(counter);
 
   // this  is a function that is coming from the slice page
   const incrementHandler = () => {
@@ -37,7 +38,7 @@ const CartItem = (props) => {
       <header>
         <h3>{title}</h3>
         <div className={classes.price}>
-          ${total.toFixed(2) * quantity} {/* toFixed(number of decimals ) */}
+          ${total.toFixed(2) + quantity} {/* toFixed(number of decimals ) */}
           <span className={classes.itemprice}>(${price.toFixed(2)}/item)</span>
         </div>
       </header>

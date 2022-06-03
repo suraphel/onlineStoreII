@@ -2,7 +2,7 @@
 
 import { createSlice } from "@reduxjs/toolkit";
 
-const initailMyCartstate = { showCart: true };
+const initailMyCartstate = { showCart: false };
 
 const showMyCart = createSlice({
   name: "mycart",
