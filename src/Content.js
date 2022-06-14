@@ -2,10 +2,9 @@
 
 import React from "react";
 import LocalCarts from "./LocalCarts";
+import CartItem from "./Component/Cart/CartItem";
 import { Grid } from "@material-ui/core";
 import { useEffect, useState, useCallback } from "react";
-
-import Data from "./Data";
 
 const Content = () => {
   const [initdata, setInintdata] = useState([]);
@@ -42,6 +41,8 @@ const Content = () => {
     return (
       <Grid item xs={12} sm={4}>
         <LocalCarts {...DataObject} />
+        {/* send this data to the cart alse */}
+        {/* <CartItem {...DataObject} /> */}
       </Grid>
     );
   };

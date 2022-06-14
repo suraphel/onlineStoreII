@@ -34,13 +34,15 @@ const cartSlice = createSlice({
       const newItem = action.payload;
       const existingItem = state.items.find((item) => item.id === newItem.id);
       state.totalquantity++;
+
+      // the data that goes into the arrat
       if (!existingItem) {
         state.items.push({
           id: newItem.id,
           title: newItem.title,
           description: newItem.description,
           price: newItem.price,
-          quantity: newItem.quantity,
+          quantity: 1,
           totalprice: newItem.totalprice,
           img: "",
         });

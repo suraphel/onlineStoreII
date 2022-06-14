@@ -1,6 +1,6 @@
 // Just sample data from the web
 // this should be in form format
-
+/*
 export default //const mydata =
 [
   {
@@ -136,6 +136,8 @@ export default //const mydata =
       "https://images-na.ssl-images-amazon.com/images/I/61KBB8K1wDL._AC_SL1000_.jpg",
   },
 ];
+
+*/
 
 // const myJsonData = JSON.stringify(mydata);
 // console.log(myJsonData);

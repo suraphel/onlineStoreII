@@ -21,9 +21,9 @@ const Header = () => {
     <div>
       <AppBar position="static">
         <Toolbar>
-          <p>Welcome to my Online store built with Material-ui by SM</p>
+          <p>Welcome to my Online store, Working on it ....</p>
           <Typography className={classes.TypographyStyles}>
-            <Link
+            {/* <Link
               component="button"
               variant="body2"
               onClick={() => {
@@ -49,7 +49,7 @@ const Header = () => {
                 </li>
               </ul>
               Button Link
-            </Link>
+            </Link>*/}
           </Typography>
           <CartButton />
           <AcUnitIcon />

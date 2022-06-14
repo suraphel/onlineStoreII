@@ -6,7 +6,7 @@ import RestoreIcon from "@material-ui/icons/Restore";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import LocationOnIcon from "@material-ui/icons/LocationOn";
 
-import DataForm from "../DataForm";
+// import DataForm from "../DataForm";
 
 const useStyles = makeStyles({
   root: {
@@ -30,7 +30,7 @@ const Nav = () => {
       <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
       <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
       <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
-      <BottomNavigationAction label="Add Item" icon={DataForm} />
+      {/* <BottomNavigationAction label="Add Item" icon={<DataForm />} /> */}
     </BottomNavigation>
   );
 };

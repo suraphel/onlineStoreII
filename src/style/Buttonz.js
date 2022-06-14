@@ -17,11 +17,11 @@ const Buttonz = () => {
         <Header />
       </Grid>
       <Grid item container>
-        <Grid item xs={0} sm={2} />
+        <Grid item xs={1} sm={2} />
         <Grid item xs={12} sm={8}>
           <Content />
           <Grid />
-          <Grid item xs={0} sm={2} />
+          <Grid item xs={1} sm={2} />
         </Grid>
       </Grid>
     </Grid>

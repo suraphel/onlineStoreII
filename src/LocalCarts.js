@@ -1,3 +1,5 @@
+// Main display page
+
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Avatar, IconButton } from "@material-ui/core";
@@ -19,6 +21,7 @@ const LocalCarts = (props) => {
   const dispatch = useDispatch();
 
   const {
+    id,
     avatarSrc,
     avatarUrl,
     title,
@@ -29,25 +32,27 @@ const LocalCarts = (props) => {
     description,
   } = props;
 
-  const addToCartHandler = () => {
+  const addToCartHandler = (id) => {
     dispatch(
       cartAction.addItemToCart({
-        id: props.key,
+        id: id,
         title: title,
         price: price,
         description: description,
-        img: avatarUrl,
       })
     );
+    console.log("we here");
   };
 
   return (
     <Card>
       <CardHeader
-        avatar={<Avatar Src={avatarUrl} />}
+        avatar={<Avatar src={avatarUrl} />}
         action={
           <IconButton aria-label="settings">
-            <ShareIcon onClick={() => console.log("SHARED")} />
+            <ShareIcon
+            //  onClick={() => console.log("SHARED")}
+            />
           </IconButton>
         }
         title={title}
